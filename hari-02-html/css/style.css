@@ -1,0 +1,22 @@
+nav ul {
+  font-size: 30px;
+}
+
+nav a {
+  font-size: 30px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+li {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+h2 {
+  font-size: 28px;
+}

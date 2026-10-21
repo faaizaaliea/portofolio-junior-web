@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Diklat</title>
+  </head>
+  <body>
+    <main>
+      <form action="proses.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Data Diri</legend>
+          <p>
+            <label for="nama">Nama Lengkap</label><br />
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              required
+              minlength="3"
+              maxlength="60"
+            />
+          </p>
+          <p>
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="example@email.com"
+            />
+          </p>
+          <p>
+            <label for="hp">No. HP</label><br />
+            <input
+              type="tel"
+              id="hp"
+              name="hp"
+              required
+              pattern="08[0-9]{8,11}"
+              title="Awali dengan 08, 10-13 digit"
+            />
+          </p>
+          <p>
+            <label for="lahir">Tanggal Lahir</label><br />
+            <input type="date" id="lahir" name="lahir" required />
+          </p>
+          <p>
+            Jenis Kelamin<br />
+            <label
+              ><input type="radio" name="jk" value="laki-laki" />
+              Laki-laki</label
+            >
+            <label
+              ><input type="radio" name="jk" value="perempuan" />
+              Perempuan</label
+            >
+          </p>
+        </fieldset>
+        <fieldset>
+          <legend>Pilihan Kelas</legend>
+          <p>
+            <label for="kelas">Kelas</label><br />
+            <select id="kelas" name="kelas" required>
+              <option value="">-- Pilih Kelas --</option>
+              <option value="web">Web Programming</option>
+              <option value="data">Data Dasar</option>
+            </select>
+          </p>
+
+          <p>
+            Minat<br /><label
+              ><input type="checkbox" name="minat[]" value="frontend" />
+              Frontend</label
+            ><br /><label
+              ><input type="checkbox" name="minat[]" value="backend" /> Backend
+            </label>
+          </p>
+          <p>
+            <label for="alamat">Alamat</label><br /><textarea
+              id="alamat"
+              name="alamat"
+              rows="3"
+              maxlength="200"
+            ></textarea>
+          </p>
+          <p>
+            <label for="foto">Foto (JPG, PNG)</label><br /><input
+              type="file"
+              id="foto"
+              name="foto"
+              accept=".jpg, .jpeg, .png"
+            />
+          </p>
+          <p>
+            <label
+              ><input type="checkbox" name="setuju" value="1" required /> Data
+              yang saya isi benar</label
+            >
+          </p>
+        </fieldset>
+        <input type="submit" value="Daftar" />
+        <input type="reset" value="Atur Ulang" />
+      </form>
+    </main>
+  </body>
+</html>
