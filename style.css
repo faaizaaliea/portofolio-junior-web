@@ -1,0 +1,238 @@
+/* === Variabel === */
+:root {
+  --warna-utama: #0d6efd;
+  --warna-gelap: #1f2937;
+  --warna-terang: #f9fafb;
+  --warna-abu: #6b7280;
+  --radius: 8px;
+  --jarak: 1rem;
+  --lebar-maks: 1100px;
+}
+
+/* === Reset CSS === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    sans-serif;
+  line-height: 1.5;
+  background-color: var(--warna-terang);
+  color: var(--warna-gelap);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  margin: 20px;
+}
+
+.grid-galeri img {
+  max-width: 300px;
+  height: auto;
+  flex: 1 1 calc(25% - 20px);
+  margin: 10px;
+  border-radius: var(--radius);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* === Layout Umum === */
+.container {
+  max-width: var(--lebar-maks);
+  margin: 0 auto;
+  padding: 0 var(--jarak);
+}
+
+section {
+  padding: 3rem 0;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+/* === Komponen === */
+.button {
+  display: block;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--warna-utama);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.35);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+li {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.situs-header {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--jarak);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1.25rem;
+  flex-direction: row;
+  list-style: none;
+}
+
+.menu a.active {
+  border-bottom: 2px solid var(--warna-utama);
+}
+
+.grid-kartu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.kartu {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kartu:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  place-items: center;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(135deg, var(--warna-utama), #6610f2);
+  color: #fff;
+}
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 3rem);
+}
+/* Form */
+form p {
+  margin-bottom: 1rem;
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  font: inherit;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(13, 110, 253, 0.35);
+  border-color: var(--warna-utama);
+}
+button {
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--warna-utama);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+thead th {
+  background: #eef2ff;
+}
+tbody tr:nth-child(even) {
+  background: #f3f4f6;
+}
+footer {
+  text-align: start;
+  padding: 2rem;
+  background: #f3f4f6;
+  color: var(--warna-gelap)
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
+footer p {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .grid-kartu {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .kartu {
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+  .grid-galeri img {
+    flexbox
+  }
+}
