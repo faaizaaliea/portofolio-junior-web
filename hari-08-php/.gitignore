@@ -1,0 +1,8 @@
+# Data hasil jalan (berisi email tamu, IP, dan berkas buatan program)
+data/*
+!data/.htaccess
+proyek-4-buku-tamu/data/*
+!proyek-4-buku-tamu/data/.htaccess
+
+# Konfigurasi lokal (hash kata sandi admin)
+proyek-4-buku-tamu/config.php
