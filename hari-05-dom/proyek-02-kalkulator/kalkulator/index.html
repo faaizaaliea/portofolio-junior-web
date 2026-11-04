@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="kalkulator">
+      <div id="layar" class="layar" aria-live="polite">0</div>
+      <div id="papan" class="papan">
+        <button data-aksi="hapus">C</button>
+        <button data-operator="/">/</button>
+        <button data-operator="*">x</button>
+        <button data-operator="-">-</button>
+        <button data-angka="7">7</button>
+        <button data-angka="8">8</button>
+        <button data-angka="9">9</button>
+        <button data-operator="+">+</button>
+        <button data-angka="4">4</button>
+        <button data-angka="5">5</button>
+        <button data-angka="6">6</button>
+        <button data-aksi="sama" class="sama">=</button>
+        <button data-angka="1">1</button>
+        <button data-angka="2">2</button>
+        <button data-angka="3">3</button>
+        <button data-angka="0" class="nol">0</button>
+        <button data-angka=".">.</button>
+        <button data-aksi="hapus-satu" aria-label="Hapus satu karakter">
+          &#9003;
+        </button>
+      </div>
+      <section class="riwayat-wrap">
+        <h2>Riwayat (5 terakhir)</h2>
+        <ol id="riwayat" class="riwayat"></ol>
+      </section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

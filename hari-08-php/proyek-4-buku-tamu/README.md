@@ -46,20 +46,16 @@ Gunakan Apache, bukan `php -S`: server bawaan PHP mengabaikan `.htaccess`, sehin
 
 ## Uji manual
 
-| Kasus                                | Hasil yang diharapkan                                    |
-| ------------------------------------ | -------------------------------------------------------- |
-| Semua kolom kosong                   | Tiga pesan galat, isian tetap                            |
-| Email salah                          | Galat di kolom email saja                                |
-| Data valid                           | Redirect ke `index.php?status=sukses`, pesan paling atas |
-| Refresh setelah sukses               | Tidak mengirim ulang (PRG)                               |
-| Kirim lagi sebelum 30 detik          | "Tunggu N detik sebelum mengirim pesan lagi."            |
-| Nama `<script>alert(1)</script>`     | Tampil sebagai teks                                      |
-| Lebih dari 5 pesan                   | Muncul navigasi halaman                                  |
-| Cari nama                            | Hanya pesan yang namanya cocok                           |
-| Buka `/data/tamu.json` lewat Apache  | 403 Forbidden                                            |
-| Buka `ekspor.php` tanpa login        | 403 "Akses ditolak"                                      |
-| Kirim form admin tanpa token CSRF    | 400 "Token tidak valid"                                  |
-
-## Tangkapan layar
-
-Lihat `../docs/screenshots/` dan `../docs/laporan-hari-08.md`.
+| Kasus                               | Hasil yang diharapkan                                    |
+| ----------------------------------- | -------------------------------------------------------- |
+| Semua kolom kosong                  | Tiga pesan galat, isian tetap                            |
+| Email salah                         | Galat di kolom email saja                                |
+| Data valid                          | Redirect ke `index.php?status=sukses`, pesan paling atas |
+| Refresh setelah sukses              | Tidak mengirim ulang (PRG)                               |
+| Kirim lagi sebelum 30 detik         | "Tunggu N detik sebelum mengirim pesan lagi."            |
+| Nama `<script>alert(1)</script>`    | Tampil sebagai teks                                      |
+| Lebih dari 5 pesan                  | Muncul navigasi halaman                                  |
+| Cari nama                           | Hanya pesan yang namanya cocok                           |
+| Buka `/data/tamu.json` lewat Apache | 403 Forbidden                                            |
+| Buka `ekspor.php` tanpa login       | 403 "Akses ditolak"                                      |
+| Kirim form admin tanpa token CSRF   | 400 "Token tidak valid"                                  |

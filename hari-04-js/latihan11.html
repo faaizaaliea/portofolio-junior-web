@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebak Angka</title>
+  </head>
+  <body>
+    <h1>Tebak Angka 1 - 100</h1>
+    <p>Buka Console (F12) bila ingin melihat riwayat tebakan.</p>
+    <button id="mulai">Mulai Permainan</button>
+    <p id="hasil"></p>
+    <script>
+      // prompt() dan alert() hanya tersedia di browser, bukan di Node.js
+      const ANGKA_MIN = 1;
+      const ANGKA_MAKS = 100;
+
+      document.getElementById("mulai").addEventListener("click", () => {
+        const angkaRahasia =
+          Math.floor(Math.random() * ANGKA_MAKS) + ANGKA_MIN;
+        let tebakan;
+        let jumlahTebakan = 0;
+        const hasil = document.getElementById("hasil");
+
+        do {
+          const masukan = prompt(
+            `Tebak angka dari ${ANGKA_MIN} sampai ${ANGKA_MAKS} (Batal untuk menyerah):`,
+          );
+
+          // Tombol Batal mengembalikan null
+          if (masukan === null) {
+            hasil.textContent = `Menyerah. Angkanya adalah ${angkaRahasia}.`;
+            return;
+          }
+
+          tebakan = Number(masukan);
+          if (
+            masukan.trim() === "" ||
+            Number.isNaN(tebakan) ||
+            tebakan < ANGKA_MIN ||
+            tebakan > ANGKA_MAKS
+          ) {
+            alert(`Masukkan angka ${ANGKA_MIN} sampai ${ANGKA_MAKS}.`);
+            continue;
+          }
+
+          jumlahTebakan++;
+          if (tebakan < angkaRahasia) {
+            alert("Terlalu rendah! Coba angka yang lebih tinggi.");
+          } else if (tebakan > angkaRahasia) {
+            alert("Terlalu tinggi! Coba angka yang lebih rendah.");
+          }
+        } while (tebakan !== angkaRahasia);
+
+        hasil.textContent = `Benar! Angkanya ${angkaRahasia}, ditebak dalam ${jumlahTebakan} kali.`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengelola Tugas</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 20px;
+      }
+
+      input,
+      button {
+        padding: 8px;
+        margin: 4px 0;
+      }
+
+      input {
+        width: 65%;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      .selesai {
+        text-decoration: line-through;
+        color: gray;
+      }
+
+      .hapus {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pengelola Tugas</h2>
+
+    <input
+      type="text"
+      id="inputTugas"
+      placeholder="Masukkan tugas..."
+      maxlength="80"
+    />
+
+    <button onclick="tambahTugas()">Tambah</button>
+
+    <p id="jumlahTugas">Tugas tersisa: 0</p>
+
+    <ul id="daftarTugas"></ul>
+
+    <button onclick="kurangTugas()">Kurang</button>
+    <button onclick="resetTugas()">Reset</button>
+
+    <script>
+      let tugas = [];
+
+      function tampilkanTugas() {
+        let daftar = document.getElementById("daftarTugas");
+        daftar.innerHTML = "";
+
+        for (let i = 0; i < tugas.length; i++) {
+          let item = document.createElement("li");
+          let teks = document.createElement("span");
+
+          teks.textContent = tugas[i].nama;
+
+          if (tugas[i].selesai) {
+            teks.classList.add("selesai");
+          }
+
+          teks.onclick = function () {
+            tugas[i].selesai = !tugas[i].selesai;
+            teks.classList.toggle("selesai");
+            hitungTugas();
+          };
+
+          item.appendChild(teks);
+          daftar.appendChild(item);
+        }
+
+        hitungTugas();
+      }
+
+      function tambahTugas() {
+        let input = document.getElementById("inputTugas");
+        let nama = input.value.trim();
+
+        if (nama === "") {
+          alert("Tugas tidak boleh kosong!");
+          return;
+        }
+
+        tugas.push({
+          nama: nama,
+          selesai: false,
+        });
+
+        input.value = "";
+        tampilkanTugas();
+      }
+
+      function kurangTugas() {
+        if (tugas.length > 0) {
+          tugas.pop();
+          tampilkanTugas();
+        }
+      }
+
+      function resetTugas() {
+        tugas = [];
+        tampilkanTugas();
+      }
+
+      function hitungTugas() {
+        let jumlah = 0;
+
+        for (let i = 0; i < tugas.length; i++) {
+          if (tugas[i].selesai === false) {
+            jumlah++;
+          }
+        }
+
+        document.getElementById("jumlahTugas").textContent =
+          "Tugas tersisa: " + jumlah;
+      }
+    </script>
+  </body>
+</html>

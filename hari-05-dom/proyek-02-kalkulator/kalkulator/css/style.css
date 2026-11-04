@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f3f4f6;
+}
+
+.kalkulator {
+  width: min(320px, 92vw);
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.layar {
+  min-height: 3.5rem;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  text-align: right;
+  font-size: 1.75rem;
+  background: #111827;
+  color: #fff;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.papan {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.papan button {
+  padding: 0.9rem 0;
+  font-size: 1.1rem;
+  border: 0;
+  border-radius: 8px;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.papan button:hover {
+  background: #d1d5db;
+}
+.papan .sama {
+  grid-row: span 2;
+  background: #0d6efd;
+  color: #fff;
+}
+.papan .sama:hover {
+  background: #0b5ed7;
+}
+.papan .nol {
+  grid-column: span 2;
+}
+
+.riwayat-wrap h2 {
+  font-size: 0.9rem;
+  margin: 1rem 0 0.25rem;
+  color: #4b5563;
+}
+.riwayat {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  color: #374151;
+}
+.riwayat li {
+  overflow-wrap: anywhere;
+}

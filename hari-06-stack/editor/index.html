@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editor Catatan dengan Undo/Redo</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Editor Catatan</h1>
+
+      <label for="editor">Tulis catatan Anda</label>
+      <textarea id="editor" rows="6"></textarea>
+
+      <p class="tombol">
+        <button id="undo" type="button" disabled>Undo</button>
+        <button id="redo" type="button" disabled>Redo</button>
+      </p>
+      <p id="info" class="info" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="js/editor.js"></script>
+  </body>
+</html>

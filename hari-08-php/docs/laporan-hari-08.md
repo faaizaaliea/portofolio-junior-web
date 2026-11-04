@@ -67,7 +67,8 @@ Berkas `bug-php/` dari instruktur belum tersedia. Tabel di bawah mengikuti dafta
 ## 7. Riwayat commit
 
 ```text
-93cd56c (HEAD -> main, origin/main, origin/HEAD) Merge remote main into local main
+fe7b205 (HEAD -> main, origin/main, origin/HEAD) Hari 8: Proyek 4 buku tamu berbasis file
+93cd56c Merge remote main into local main
 a55ec81 update
 cf4d11a Refactor style.css
 3185ccc update
@@ -77,4 +78,8 @@ fe2cae7 Tambah .gitignore untuk dependensi dan berkas lokal
 ef7f237 Add photo.png
 42c8340 Add initial CSS styles for layout and components
 32e7317 Add initial HTML structure for profile webpage
+0e4336e Delete hari-01-instalasi/docs directory
+6190850 Hari 3: CSS
+fc4bf51 hari 2: html
+6776337 Hari 1: bukti instalasi dan script uji
 ```

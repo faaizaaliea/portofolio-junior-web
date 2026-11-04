@@ -253,6 +253,22 @@ File HTML statis dikirim oleh server sebagai dokumen yang sudah tersedia. Hal in
 
 - Repositori: `https://github.com/faaizaaliea/portofolio-junior-web`
 - Folder Hari 1: `hari-01-instalasi/` berisi `index.html`, `tes.js`, dan `tes.php` (commit: "Hari 1: bukti instalasi dan script uji").
+- Riwayat commit (`git log --oneline`):
+
+```text
+fe2cae7 (HEAD -> main) Tambah .gitignore untuk dependensi dan berkas lokal
+9f2b9d9 (origin/main, origin/HEAD) Gabungkan perubahan remote dan pertahankan folder docs
+0555963 docs
+ef7f237 Add photo.png
+42c8340 Add initial CSS styles for layout and components
+32e7317 Add initial HTML structure for profile webpage
+0e4336e Delete hari-01-instalasi/docs directory
+6190850 Hari 3: CSS
+fc4bf51 hari 2: html
+6776337 Hari 1: bukti instalasi dan script uji
+```
+
+- Penghapusan `docs/` pada commit `0e4336e` (dilakukan dari antarmuka web GitHub) bentrok dengan perubahan lokal; konflik diselesaikan lewat merge pada `9f2b9d9` dengan mempertahankan folder `docs`, tanpa `--force`.
 - Identitas Git, cabang bawaan `main`, dan Git Credential Manager sudah dikonfigurasi (bagian 3.5).
 - Peta perjalanan request dan hasil Lab 1 didokumentasikan pada `peta-request.md` dan `lembar-kerja-1.md` di folder yang sama dengan laporan ini.
 

@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  font-family: system-ui, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.tata-letak {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.kartu {
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+h3 {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.layar-nomor {
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  background: #111827;
+  border-radius: 8px;
+}
+
+.layar-nomor .label {
+  display: block;
+  color: #9ca3af;
+}
+
+.nomor {
+  display: block;
+  font-size: 4rem;
+  line-height: 1.1;
+}
+
+.pesan {
+  min-height: 1.25rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.tombol-baris {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #0d6efd;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+button.bahaya {
+  background: #dc2626;
+}
+
+.daftar {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #374151;
+}
+
+.penghitung {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #4b5563;
+}
+
+.label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  border: 1px solid #9ca3af;
+  border-radius: 8px;
+  resize: vertical;
+}

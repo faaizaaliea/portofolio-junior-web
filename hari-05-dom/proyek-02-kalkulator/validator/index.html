@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Pendaftaran Akun</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="kartu">
+      <h1>Daftar Akun</h1>
+      <form id="form-daftar" novalidate>
+        <p>
+          <label for="nama">Nama</label>
+          <input
+            id="nama"
+            name="nama"
+            autocomplete="name"
+            aria-describedby="galat-nama"
+          />
+          <span id="galat-nama" class="galat" aria-live="polite"></span>
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            aria-describedby="galat-email"
+          />
+          <span id="galat-email" class="galat" aria-live="polite"></span>
+        </p>
+        <p>
+          <label for="hp">Nomor HP</label>
+          <input
+            id="hp"
+            name="hp"
+            type="tel"
+            autocomplete="tel"
+            aria-describedby="galat-hp"
+          />
+          <span id="galat-hp" class="galat" aria-live="polite"></span>
+        </p>
+        <p>
+          <label for="sandi">Kata Sandi</label>
+          <input
+            id="sandi"
+            name="sandi"
+            type="password"
+            autocomplete="new-password"
+            aria-describedby="galat-sandi"
+          />
+          <span id="galat-sandi" class="galat" aria-live="polite"></span>
+        </p>
+        <p>
+          <label for="konfirmasi">Konfirmasi Sandi</label>
+          <input
+            id="konfirmasi"
+            name="konfirmasi"
+            type="password"
+            autocomplete="new-password"
+            aria-describedby="galat-konfirmasi"
+          />
+          <span id="galat-konfirmasi" class="galat" aria-live="polite"></span>
+        </p>
+        <button id="kirim" type="submit" disabled>Kirim</button>
+      </form>
+      <section id="ringkasan" class="ringkasan" hidden></section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

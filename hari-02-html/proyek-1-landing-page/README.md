@@ -32,4 +32,4 @@ proyek-1-landing-page/
 ## Catatan
 
 - Form kontak memakai `action="proses.php"` seperti form pendaftaran di Hari 2. Berkas `proses.php` belum dibuat (materi Hari 8), sehingga mengirim form akan menampilkan 404. Validasi yang berjalan saat ini hanya validasi HTML5 di browser.
-- Cara membuka: jalankan dengan Live Server di VS Code, atau salin folder ke `htdocs` XAMPP lalu buka `http://localhost/proyek-1-landing-page/`.
+- Cara membuka: dengan Live Server di VS Code, atau salin folder ke `htdocs` XAMPP lalu buka `http://localhost/proyek-1-landing-page/`.

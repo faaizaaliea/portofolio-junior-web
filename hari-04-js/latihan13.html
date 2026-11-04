@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+    <input type="number" id="angka1" placeholder="Angka pertama" />
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">×</option>
+      <option value="/">÷</option>
+    </select>
+    <input type="number" id="angka2" placeholder="Angka kedua" />
+    <button onclick="hitung()">Hitung</button>
+    <p id="hasil">Hasil:</p>
+    <script>
+      function hitung() {
+        const teksAngka1 = document.getElementById("angka1").value;
+        const operator = document.getElementById("operator").value;
+        const teksAngka2 = document.getElementById("angka2").value;
+        const elemenHasil = document.getElementById("hasil");
+
+        // Number("") bernilai 0, jadi input kosong dicek lebih dulu
+        if (teksAngka1.trim() === "" || teksAngka2.trim() === "") {
+          elemenHasil.textContent = "Hasil: isi kedua angka terlebih dahulu.";
+          return;
+        }
+
+        const angka1 = Number(teksAngka1);
+        const angka2 = Number(teksAngka2);
+        if (Number.isNaN(angka1) || Number.isNaN(angka2)) {
+          elemenHasil.textContent = "Hasil: input harus berupa angka.";
+          return;
+        }
+
+        let hasil;
+        let pesanError = "";
+
+        switch (operator) {
+          case "+":
+            hasil = angka1 + angka2;
+            break;
+
+          case "-":
+            hasil = angka1 - angka2;
+            break;
+
+          case "*":
+            hasil = angka1 * angka2;
+            break;
+
+          case "/":
+            if (angka2 === 0) {
+              pesanError = "tidak dapat membagi dengan nol";
+            } else {
+              hasil = angka1 / angka2;
+            }
+            break;
+
+          default:
+            pesanError = "operator tidak valid";
+        }
+
+        if (pesanError !== "") {
+          elemenHasil.textContent = `Hasil: ${pesanError}`;
+        } else {
+          elemenHasil.textContent = `Hasil: ${hasil}`;
+        }
+      }
+    </script>
+  </body>
+</html>

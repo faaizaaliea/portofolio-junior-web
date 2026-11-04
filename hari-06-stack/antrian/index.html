@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antrean Loket</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Antrean Loket</h1>
+      <p class="info">Tanggal antrean: <span id="tanggal"></span></p>
+
+      <section class="panel" aria-live="polite">
+        <p>Sedang dipanggil:</p>
+        <p id="dipanggil" class="nomor">-</p>
+      </section>
+
+      <section class="panel">
+        <p>Menunggu: <strong id="jumlah">0</strong></p>
+      </section>
+
+      <div class="tombol">
+        <button id="ambil" type="button">Ambil Nomor</button>
+        <button id="panggil" type="button">Panggil Berikutnya</button>
+        <button id="reset" type="button">Reset</button>
+      </div>
+
+      <h2>Daftar Antrean</h2>
+      <ol id="daftar"></ol>
+
+      <h2>5 Nomor Terakhir Dipanggil</h2>
+      <ol id="riwayat"></ol>
+    </main>
+
+    <script type="module" src="js/antrian.js"></script>
+  </body>
+</html>

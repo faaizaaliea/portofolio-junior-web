@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simulator Antrean dan Riwayat - Klinik</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Klinik Sehat: Antrean dan Catatan</h1>
+    <div class="tata-letak">
+      <section class="kartu" aria-labelledby="judul-antrian">
+        <h2 id="judul-antrian">Antrean Loket</h2>
+        <div class="layar-nomor" aria-live="polite">
+          <span class="label">Sedang dipanggil</span>
+          <strong id="nomor-dipanggil" class="nomor">-</strong>
+        </div>
+        <p id="pesan-antrian" class="pesan" role="status"></p>
+        <div class="tombol-baris">
+          <button id="ambil" type="button">Ambil Nomor</button>
+          <button id="panggil" type="button">Panggil</button>
+          <button id="reset-antrian" type="button" class="bahaya">Reset</button>
+        </div>
+        <h3>Menunggu: <span id="jumlah-menunggu">0</span></h3>
+        <ol id="daftar-menunggu" class="daftar"></ol>
+        <h3>5 nomor terakhir dipanggil</h3>
+        <ol id="riwayat-panggilan" class="daftar"></ol>
+      </section>
+
+      <section class="kartu" aria-labelledby="judul-catatan">
+        <h2 id="judul-catatan">Catatan dengan Undo/Redo</h2>
+        <div class="tombol-baris">
+          <button id="undo" type="button" disabled>Undo</button>
+          <button id="redo" type="button" disabled>Redo</button>
+          <span id="penghitung-riwayat" class="penghitung"
+            >Riwayat: 0/50 langkah</span
+          >
+        </div>
+        <label for="catatan" class="label">Catatan pasien</label>
+        <textarea
+          id="catatan"
+          rows="12"
+          placeholder="Ketik catatan di sini..."
+        ></textarea>
+        <p id="status-simpan" class="pesan" role="status"></p>
+      </section>
+    </div>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
