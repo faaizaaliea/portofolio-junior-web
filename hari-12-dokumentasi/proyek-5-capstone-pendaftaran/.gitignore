@@ -1,0 +1,7 @@
+config/config.php
+vendor/
+node_modules/
+.env
+storage/log/*.log
+phpDocumentor.phar
+.phpdoc/

@@ -37,7 +37,7 @@ function bersihkanSpasi(string $teks): string
 }
 
 /**
- * Mengambil nilai teks dari array input; bukan string (mis. array) dianggap kosong.
+ * Mengambil nilai teks dari array input.
  *
  * @param array<string, mixed> $input Sumber data (mis. $_POST).
  * @param string $kunci Nama kolom.

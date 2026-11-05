@@ -1,4 +1,4 @@
-<?php /* public/_form.php — dipakai bersama oleh tambah.php dan ubah.php */ ?>
+<?php /* public/_form.php  dipakai bersama oleh tambah.php dan ubah.php */ ?>
 <form method='post'>
     <input type='hidden' name='csrf' value='<?= e(tokenCsrf()) ?>'>
     <p>

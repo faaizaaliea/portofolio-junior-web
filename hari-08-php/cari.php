@@ -36,7 +36,7 @@ function e(string|int $teks): string
 }
 
 /**
- * Mengambil parameter $_GET sebagai teks (bukan string dianggap kosong).
+ * Mengambil parameter $_GET sebagai teks.
  *
  * @param string $kunci Nama parameter.
  * @return string Nilai yang sudah di-trim.

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /*
- * DEMONSTRASI SQL INJECTION — HANYA UNTUK LINGKUNGAN LATIHAN.
+ * DEMONSTRASI SQL INJECTION  HANYA UNTUK LINGKUNGAN LATIHAN.
  * Halaman ini sengaja memuat kode rentan. Jangan di-commit ke repositori publik,
  * jangan di-deploy ke server. Dikunci: hanya bisa dibuka dari localhost dan saat debug = true.
  */
@@ -47,7 +47,7 @@ if ($email !== '') {
 function tabelHasil(array $baris): void
 {
     if ($baris === []) {
-        echo '<p><strong>0 baris</strong> — tidak ada data yang cocok.</p>';
+        echo '<p><strong>0 baris</strong>  tidak ada data yang cocok.</p>';
         return;
     }
     echo '<p><strong>' . count($baris) . ' baris</strong> dikembalikan:</p><table border="1" cellpadding="4"><tr><th>ID</th><th>Nama</th><th>Email</th><th>No. HP</th></tr>';
@@ -61,7 +61,7 @@ $area = 'publik';
 $judul = 'Demo SQL Injection (latihan)';
 require __DIR__ . '/../templates/header.php';
 ?>
-<h2>Demo SQL Injection — hanya untuk latihan</h2>
+<h2>Demo SQL Injection  hanya untuk latihan</h2>
 <p>Coba: <a href="?email=<?= e(urlencode($payload)) ?>">?email=<?= e($payload) ?></a>
  · pembanding normal: <a href="?email=<?= e(urlencode('budi@contoh.test')) ?>">email biasa</a></p>
 <form method="get">
@@ -94,7 +94,7 @@ tabel ikut keluar. Penyerang berhasil mengubah <em>struktur</em> query.</p>
 terpisah. Karena <code>PDO::ATTR_EMULATE_PREPARES</code> bernilai <code>false</code> (lihat
 <code>config/database.php</code>), MySQL mem-parse kerangka query lebih dulu, sebelum nilai ada. Nilai
 <code>x' OR '1'='1</code> kemudian hanya diperlakukan sebagai <em>data</em> literal untuk dibandingkan dengan kolom
-email, bukan sebagai kode. Tidak ada email yang persis sama dengan teks aneh itu, maka hasilnya 0 baris.
+email. Tidak ada email yang persis sama dengan teks aneh itu, maka hasilnya 0 baris.
 Inti perbedaannya: pada versi aman, input tidak pernah punya kesempatan menjadi bagian dari sintaks SQL.</p>
 <?php endif; ?>
 <?php require __DIR__ . '/../templates/footer.php'; ?>

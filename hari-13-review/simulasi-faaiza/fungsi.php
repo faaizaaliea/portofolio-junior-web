@@ -115,7 +115,7 @@ function simpanPeserta(PDO $pdo, array $data): int
  */
 function cariPeserta(PDO $pdo, string $kata): array
 {
-    // Prepared statement: kata kunci dikirim sebagai data, bukan bagian SQL.
+    // Prepared statement: kata kunci dikirim sebagai data.
     $stmt = $pdo->prepare(
         'SELECT p.id, p.nama, p.email, p.no_hp, k.nama_kursus
            FROM peserta p JOIN kursus k ON k.id = p.kursus_id

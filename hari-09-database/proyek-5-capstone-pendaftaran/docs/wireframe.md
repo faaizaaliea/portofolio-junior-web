@@ -1,6 +1,7 @@
 # Wireframe (sketsa teks)
 
-## 1. Form pendaftaran (publik) — `tambah.php`
+## 1. Form pendaftaran (publik) `tambah.php`
+
 ```
 +--------------------------------------------------+
 | Pendaftaran Pelatihan                            |
@@ -19,7 +20,8 @@
 +--------------------------------------------------+
 ```
 
-## 2. Daftar pendaftar (admin) — `index.php`
+## 2. Daftar pendaftar (admin) `index.php`
+
 ```
 +--------------------------------------------------+
 | Pendaftaran Pelatihan                            |
@@ -37,7 +39,8 @@
 +--------------------------------------------------+
 ```
 
-## 3. Bukti pendaftaran (peserta, PDF — Hari 10)
+## 3. Bukti pendaftaran (peserta, PDF Hari 10)
+
 ```
 +--------------------------------------------------+
 |              BUKTI PENDAFTARAN                   |

@@ -1,5 +1,5 @@
 <?php
-/* templates/footer.php — $pakaiDataTables: muat jQuery dan DataTables (SweetAlert2 dan app.js selalu dimuat) */
+/* templates/footer.php  $pakaiDataTables: muat jQuery dan DataTables (SweetAlert2 dan app.js selalu dimuat) */
 ?>
 </main>
 <footer class='container py-3'><small>&copy; <?= date('Y') ?> Pendaftaran Pelatihan</small></footer>

@@ -1,5 +1,5 @@
 <?php
-/* templates/header.php — $area: 'admin' atau 'publik' (default publik) */
+/* templates/header.php  $area: 'admin' atau 'publik' (default publik) */
 $area = $area ?? 'publik';
 ?>
 <!DOCTYPE html>

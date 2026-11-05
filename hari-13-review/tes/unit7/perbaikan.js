@@ -1,4 +1,4 @@
-// 1. Perulangan: pemisah di for harus titik koma (;), bukan koma
+// 1. Perulangan: pemisah di for harus titik koma (;)
 function loopToTen() {
   for (var i = 0; i < 10; i++) {
     console.log(i);

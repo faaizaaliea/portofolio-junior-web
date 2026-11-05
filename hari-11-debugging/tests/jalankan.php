@@ -18,7 +18,11 @@ uji($hasilUji, 'HP 11 digit lolos', true, validNoHp('08123456789'));
 uji($hasilUji, 'HP tanpa awalan 08 gagal', false, validNoHp('0712345678'));
 uji($hasilUji, 'Sisa kuota sama dengan nol', 0, hitungSisaKuota(30, 30));
 uji($hasilUji, 'Sisa kuota kosong', 30, hitungSisaKuota(30, 0));
-uji($hasilUji, 'Nomor bukti ID dua digit', 'REG-2026-000042', formatNomorBukti(2026, 42));
+uji($hasilUji, 'Nomor bukti ID dua digit', 'REG-2026-000042', formatNomorBukti(2026, 42));uji($hasilUji, 'HP 13 digit lolos', true, validNoHp('0812345678901'));
+uji($hasilUji, 'HP kosong gagal', false, validNoHp(''));
+uji($hasilUji, 'HP berspasi gagal', false, validNoHp('0812 345678'));
+uji($hasilUji, 'HP script gagal', false, validNoHp('<script>'));
+uji($hasilUji, 'Sisa kuota kuota nol', 0, hitungSisaKuota(0, 0));
 $gagal = 0;
 foreach ($hasilUji as [$nama, $lolos, $diharapkan, $aktual]) {
 if ($lolos) {
