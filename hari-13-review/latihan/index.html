@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="font"
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@200;300;400;500;700&display=swap"
+    />
+    <title>Sistem Pendaftaran Kursus Singkat</title>
+  </head>
+  <body class="container">
+    <h1>Sistem Pendaftaran Kursus Singkat</h1>
+    <h2>Mulai karier Anda di Dunia Digital bersama kami!</h2>
+    <div class="container-card">
+      <h3>Formulir Pendaftaran</h3>
+      <main>
+        <div>
+          <p>
+            Silakan isi formulir di bawah ini untuk mendaftar ke salah satu
+            kursus singkat kami. Pastikan semua informasi yang Anda berikan
+            akurat dan lengkap.
+          </p>
+        </div>
+        <div>
+          <form action="index.php" method="post">
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" id="nama" required />
+            <br />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+            <br />
+            <label for="no_hp">No. HP</label>
+            <input type="tel" name="no_hp" id="no_hp" required />
+            <br />
+            <label for="kursus">Kursus</label>
+            <br />
+            <div class="select-wrapper">
+              <select name="kursus" id="kursus" required>
+                <option value="" disabled selected>Pilih Kursus</option>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile Development</option>
+                <option value="ui">UI/UX Design</option>
+                <option value="seo">SEO Optimization</option>
+              </select>
+            </div>
+            <br />
+            <button type="submit">Daftar</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
